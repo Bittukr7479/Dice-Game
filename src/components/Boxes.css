@@ -1,0 +1,13 @@
+.Box{
+    height: 72px;
+    width: 72px;
+    background-color: (transparent);
+    border: 3px solid black;
+}
+
+p{
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px;
+}

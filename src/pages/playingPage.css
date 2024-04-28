@@ -1,0 +1,78 @@
+.playingPage{
+    margin: 64px 80px;
+    display: grid;
+    justify-items: center;
+    grid-gap: 48px;
+}
+
+.dice-selection{
+    height: 138px;
+    padding-top: 15px;
+}
+
+.total-score{
+    height: 151px;
+    width: 135px;
+}
+
+h1{
+    height: 100px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 96px;
+    margin: 0px;
+}
+
+h2{
+    text-align: center;
+    margin: 0px;
+}
+
+.frame1 {
+    background-color: transparent;
+    height: 151px;
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    gap: 586px;
+}
+
+.Boxes{
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+}
+
+.Boxes> Button {
+    height: 72px;
+    width: 72px;
+    background-color: transparent;
+    border: 3px solid black;
+}
+
+.clickOnDice{
+    display: grid;
+    gap: 15px;
+}
+
+.frame2{
+    text-align: center;
+    height: 449px;
+    width: 250px;
+    background-color: transparent;
+    display: grid;
+    align-content: space-between;
+}
+
+.rollBtn> Button{
+    border-radius: 5px;
+    width: 220px;
+    height: 44px;
+}
+
+.rollBtn{
+    gap: 24px;
+    display: grid;
+    justify-items: center;
+}

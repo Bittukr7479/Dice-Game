@@ -1,0 +1,35 @@
+.landingPage{
+    margin: 84px 129px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.image{
+    float: left;
+    width: 50%;
+}
+
+.dice-game{
+    float: right;
+    width: 50%;
+    font-size: 58px;
+}
+
+.dice-game> h1{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: 96px;
+    margin: 0px;
+    width: 633px;
+}
+
+.playNow{
+    display: flex;
+    justify-content: flex-end;
+}
+Button{
+    height: 44px;
+    width: 220px;
+}
