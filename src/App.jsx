@@ -5,12 +5,11 @@ import PlayingPage from "./pages/playingPage";
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [re, setre]= useState(true)
   return (
     <>
-    <LandingPage/>
-    <PlayingPage/>
+      <LandingPage />
+      {re && <PlayingPage />}
     </>
   )
 }

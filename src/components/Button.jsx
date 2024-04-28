@@ -1,11 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-function Button() {
+function Button(props) {
+  const handleClick = () => {
+    if (props.onClick) {
+      props.onClick();
+    }
+  };
+
   return (
     <>
-        <button>Click Me</button>
+      <button onClick={handleClick}>{props.btnName}</button>
     </>
-  )
+  );
 }
 
-export default Button
+export default Button;

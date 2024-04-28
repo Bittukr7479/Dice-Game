@@ -29,6 +29,20 @@ h2{
     margin: 0px;
 }
 
+#notSelectedNumber{
+    color: red;
+    margin: 0px;
+    padding-bottom: 3px;
+    font-size: 25px;
+}
+
+.frame1> h3{
+    position: absolute;
+    top: 138%;
+    right: 28%;
+    color: black;
+}
+
 .frame1 {
     background-color: transparent;
     height: 151px;
@@ -42,6 +56,10 @@ h2{
     display: flex;
     justify-content: flex-end;
     gap: 24px;
+}
+
+.SelectedBox{
+    background-color: black;
 }
 
 .Boxes> Button {
@@ -69,10 +87,31 @@ h2{
     border-radius: 5px;
     width: 220px;
     height: 44px;
+    font-size: 16px;
+    font-weight: bolder;
 }
 
 .rollBtn{
     gap: 24px;
     display: grid;
     justify-items: center;
+}
+
+.rule{
+    border-radius: 3px;
+    padding: 24px;
+    background-color: antiquewhite;
+}
+
+.rule> h3{
+    margin: 0px 0px 25px 0px;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.rule> p{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: unset;
+    margin: 0px;
 }

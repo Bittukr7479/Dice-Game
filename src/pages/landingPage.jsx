@@ -12,7 +12,7 @@ function LandingPage() {
       <div className="dice-game">
         <h1>DICE GAME</h1>
         <div className='playNow'>
-          <Button />
+          <Button btnName={"Play Now"} />
         </div>
       </div>
     </div>

@@ -28,7 +28,15 @@
 .playNow{
     display: flex;
     justify-content: flex-end;
+    font-size: 20px;
 }
+
+.playNow> button{
+    font-size: 16px;
+    background-color: black;
+    color: white;
+}
+
 Button{
     height: 44px;
     width: 220px;
