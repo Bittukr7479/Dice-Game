@@ -1,21 +1,21 @@
-.playingPage{
-    margin: 64px 80px;
+.playingPage {
+    margin: 26px 80px;
     display: grid;
     justify-items: center;
-    grid-gap: 48px;
+    grid-gap: 31px;
 }
 
-.dice-selection{
+.dice-selection {
     height: 138px;
     padding-top: 15px;
 }
 
-.total-score{
+.total-score {
     height: 151px;
     width: 135px;
 }
 
-h1{
+h1 {
     height: 100px;
     display: block;
     text-align: center;
@@ -24,19 +24,21 @@ h1{
     margin: 0px;
 }
 
-h2{
+h2 {
     text-align: center;
     margin: 0px;
 }
 
-#notSelectedNumber{
+#notSelectedNumber {
     color: red;
     margin: 0px;
     padding-bottom: 3px;
     font-size: 25px;
 }
 
-.frame1> h3{
+.frame1>h3 {
+    font-weight: 700;
+    font-size: 24px;
     position: absolute;
     top: 138%;
     right: 28%;
@@ -52,29 +54,29 @@ h2{
     gap: 586px;
 }
 
-.Boxes{
+.Boxes {
     display: flex;
     justify-content: flex-end;
     gap: 24px;
 }
 
-.SelectedBox{
+.SelectedBox {
     background-color: black;
 }
 
-.Boxes> Button {
+.Boxes>Button {
     height: 72px;
     width: 72px;
     background-color: transparent;
     border: 3px solid black;
 }
 
-.clickOnDice{
+.clickOnDice {
     display: grid;
     gap: 15px;
 }
 
-.frame2{
+.frame2 {
     text-align: center;
     height: 449px;
     width: 250px;
@@ -83,35 +85,59 @@ h2{
     align-content: space-between;
 }
 
-.rollBtn> Button{
-    border-radius: 5px;
-    width: 220px;
-    height: 44px;
-    font-size: 16px;
-    font-weight: bolder;
-}
 
-.rollBtn{
+.rollBtn {
     gap: 24px;
     display: grid;
     justify-items: center;
 }
 
-.rule{
+.rule {
     border-radius: 3px;
     padding: 24px;
     background-color: antiquewhite;
 }
 
-.rule> h3{
+.rule>h3 {
     margin: 0px 0px 25px 0px;
     font-weight: bold;
     font-size: 28px;
 }
 
-.rule> p{
+.rule>p {
     font-size: 18px;
     font-weight: 500;
     text-align: unset;
+    margin: 0px;
+}
+
+.button-container {
+    display: flex;
+}
+
+.button {
+    height: 72px;
+    width: 72px;
+    border: 3px solid black;
+    background-color: transparent;
+    color: black;
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.selected-button {
+    height: 72px;
+    width: 72px;
+    border: 3px solid black;
+    background-color: black;
+    color: white;
+    box-shadow: 10px 10px 5px rgb(88, 91, 91);
+}
+
+p {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
     margin: 0px;
 }

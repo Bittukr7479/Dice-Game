@@ -37,7 +37,16 @@
     color: white;
 }
 
+a> button{
+    background-color: black;
+    color: white;
+}
+
 Button{
+    font-size: 16px;
+    font-weight: bolder;
+    border: 2px solid black;
+    border-radius: 5px;
     height: 44px;
     width: 220px;
 }

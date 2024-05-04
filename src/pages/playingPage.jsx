@@ -3,25 +3,32 @@ import Button from '../components/Button'
 import './playingPage.css'
 import handleRollClick from '../utils/resultRoll'
 import { useState, useEffect } from 'react'
-import Box from '../components/Boxes'
 import selectedNumber from '../utils/selection'
 import showRule from '../utils/showRules'
 import resetScore from '../utils/reset'
+import ButtonGroup from '../components/ButtonGroup'
+import { BrowserRouter} from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link';
+
+const buttons = [
+  "1", "2", "3", "4", "5", "6"
+]
 
 function playingPage() {
+  const [isSelected, setIsSelected] = useState(0)
   const [result, setResult] = useState(0);
   const [score, setScore] = useState(0);
-  const [number, selectNumber] = useState(0);
+  // const [isSelected, selectNumber] = useState(0);
   const [showRules, notShowRules] = useState(false);
-  // console.log("result:  " + result);
-  // console.log("number:  " + number);
+  console.log("result:  " + result);
+  console.log("isSelected:  " + isSelected);
 
   useEffect(() => {
-    if (number == 0 && !(result == 0)) {
-      // console.log("choose any number");
+    if (isSelected == 0 && !(result == 0)) {
+      // console.log("choose any isSelected");
       document.getElementById("notSelectedNumber").innerHTML = "You have not selected any number";
     }
-    else if (result == number) {
+    else if (result == isSelected) {
       setScore(prevScore => prevScore + parseInt(result));
       document.getElementById("notSelectedNumber").innerHTML = "";
       // console.log("success");
@@ -30,11 +37,11 @@ function playingPage() {
       setScore(prevScore => prevScore - parseInt(result));
       document.getElementById("notSelectedNumber").innerHTML = "";
     }
-  }, [result, number]);
+  }, [result, isSelected]);
   // console.log("TOTAL SCORE IS:   " + score);
   return (
 
-    <div className='playingPage'>
+    <div className='playingPage' id='play'>
       <div className='frame1'>
         <div className="total-score">
           <h1>{score}</h1>
@@ -43,14 +50,18 @@ function playingPage() {
         <div className="dice-selection">
           <h3 id='notSelectedNumber'>
           </h3>
-          <div className="Boxes">
-            <Box number={1} id="Box-1" onClick={() => selectedNumber(1, selectNumber)} />
-            <Box number={2} id="Box-1" onClick={() => selectedNumber(2, selectNumber)} />
-            <Box number={3} id="Box-1" onClick={() => selectedNumber(3, selectNumber)} />
-            <Box number={4} id="Box-1" onClick={() => selectedNumber(4, selectNumber)} />
-            <Box number={5} id="Box-1" onClick={() => selectedNumber(5, selectNumber)} />
-            <Box number={6} id="Box-1" onClick={() => selectedNumber(6, selectNumber)} />
+          <div className='app-container'>
+            <ButtonGroup buttons={buttons} isSelected={isSelected} setIsSelected={setIsSelected} />
           </div>
+
+          {/* <div className="Boxes">
+            <Box isSelected={1} id="Box-1" onClick={() => selectedNumber(1, selectNumber)} />
+            <Box isSelected={2} id="Box-1" onClick={() => selectedNumber(2, selectNumber)} />
+            <Box isSelected={3} id="Box-1" onClick={() => selectedNumber(3, selectNumber)} />
+            <Box isSelected={4} id="Box-1" onClick={() => selectedNumber(4, selectNumber)} />
+            <Box isSelected={5} id="Box-1" onClick={() => selectedNumber(5, selectNumber)} />
+            <Box isSelected={6} id="Box-1" onClick={() => selectedNumber(6, selectNumber)} />
+          </div> */}
           <div>
             <h3 >Select Number</h3>
           </div>
@@ -63,11 +74,16 @@ function playingPage() {
         </div>
 
         <div className="rollBtn">
-          <Button btnName={"Reset Score"} onClick={() => resetScore(setScore)} />
-          <Button btnName={"Show Rules"} onClick={() => showRule(showRules, notShowRules)} />
+          <Button btnName={"Reset Score"} onClick={() => resetScore(setScore, setIsSelected, setResult)} />
+         <header>
+         <Link to="#rule">
+          <Button btnName={showRules?"Hide Rules": "Show Rules"} onClick={() => showRule(showRules, notShowRules)} />
+         </Link>
+       </header>
         </div>
       </div>
-      {showRules && (<div className="rule" id='rule'>
+      {showRules && (
+      <div className="rule" id='rule'>
         <h3>How to play dice game</h3>
         <p>Select any number <br />Click on dice image <br />after click on  dice  if selected number is equal to dice number you will get same point as dice <br />if you get wrong guess then  2 point will be dedcuted </p>
       </div>)}
