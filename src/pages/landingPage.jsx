@@ -14,9 +14,9 @@ function LandingPage() {
     <>
       <BrowserRouter>
         <div className='landingPage'>
-          <div className="image">
+          {/* <div className="image"> */}
             <img src={`/assets/dices.png`} alt="Dices" />
-          </div>
+          {/* </div> */}
           <div className="dice-game">
             <h1>DICE GAME</h1>
             <div className='playNow'>
