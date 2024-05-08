@@ -5,7 +5,7 @@
     text-align: center;
 }
 
-.image{
+.landingPage> img{
     float: left;
     width: 50%;
 }
@@ -16,7 +16,8 @@
     font-size: 58px;
 }
 
-.dice-game> h1{
+.h1tag> h1{
+    height: unset;
     display: flex;
     justify-content: flex-end;
     font-weight: bold;
@@ -49,4 +50,44 @@ Button{
     border-radius: 5px;
     height: 44px;
     width: 220px;
+}
+
+@media screen and (max-width:600px) {
+
+    .landingPage{
+        /* display: grid; */display: block;
+        align-content: space-between;
+    justify-items: center;
+    grid-gap: 31px;
+        margin: 0px;
+        /* width: 494px; */
+        background-image: url('/assets/dices.png');
+        background-repeat: no-repeat;
+        background-repeat: round;
+    }
+    .landingPage> img{
+        display: none;
+    }
+    .dice-game{
+        width: auto;
+        height: 257px;
+        display: flow;
+        top: 57px;
+        position: relative;
+    }
+    .landingPage> img {
+        width: 100%;
+    }
+    .h1tag> h1{
+        font-size: unset;
+        display: contents;
+
+    }
+
+    .playNow {
+        display: contents;
+    }
+    /* .dice-game{
+        font-size: unset;
+    } */
 }

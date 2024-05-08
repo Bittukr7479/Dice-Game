@@ -18,13 +18,13 @@ function LandingPage() {
             <img src={`/assets/dices.png`} alt="Dices" />
           {/* </div> */}
           <div className="dice-game">
-            <h1>DICE GAME</h1>
+            <div className='h1tag'><h1>DICE GAME</h1></div>
             <div className='playNow'>
-              <header>
+            
                 <Link to="#play">
               <Button btnName={"Play Now"}/>
                 </Link>
-              </header>
+              
               
             </div>
           </div>

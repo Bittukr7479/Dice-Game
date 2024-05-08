@@ -15,7 +15,7 @@
     width: 135px;
 }
 
-h1 {
+.total-score> h1 {
     height: 100px;
     display: block;
     text-align: center;
@@ -51,7 +51,7 @@ h2 {
     width: 1280px;
     display: flex;
     justify-content: space-between;
-    gap: 586px;
+    /* gap: 586px; */
 }
 
 .Boxes {
@@ -140,4 +140,13 @@ p {
     font-weight: bold;
     text-align: center;
     margin: 0px;
+}
+
+@media screen and (max-width:600px) {
+    .playingPage{
+        margin: 0px;
+    }
+    .frame1 {
+        display: contents;
+    }
 }
