@@ -54,14 +54,6 @@ function playingPage() {
             <ButtonGroup buttons={buttons} isSelected={isSelected} setIsSelected={setIsSelected} />
           </div>
 
-          {/* <div className="Boxes">
-            <Box isSelected={1} id="Box-1" onClick={() => selectedNumber(1, selectNumber)} />
-            <Box isSelected={2} id="Box-1" onClick={() => selectedNumber(2, selectNumber)} />
-            <Box isSelected={3} id="Box-1" onClick={() => selectedNumber(3, selectNumber)} />
-            <Box isSelected={4} id="Box-1" onClick={() => selectedNumber(4, selectNumber)} />
-            <Box isSelected={5} id="Box-1" onClick={() => selectedNumber(5, selectNumber)} />
-            <Box isSelected={6} id="Box-1" onClick={() => selectedNumber(6, selectNumber)} />
-          </div> */}
           <div>
             <h3 >Select Number</h3>
           </div>
@@ -85,7 +77,7 @@ function playingPage() {
       {showRules && (
       <div className="rule" id='rule'>
         <h3>How to play dice game</h3>
-        <p>Select any number <br />Click on dice image <br />after click on  dice  if selected number is equal to dice number you will get same point as dice <br />if you get wrong guess then  2 point will be dedcuted </p>
+        <p>Select any number <br />Click on dice image <br />after click on  dice  if selected number is equal to dice number you will get same point as dice <br />if you get wrong guess then same (guesses number) point will be dedcuted </p>
       </div>)}
     </div>
   )
