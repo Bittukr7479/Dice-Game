@@ -32,9 +32,8 @@ function playingPage() {
       setScore(prevScore => prevScore + parseInt(result));
       document.getElementById("notSelectedNumber").innerHTML = "";
       // console.log("success");
-    } else {
-      // console.log("fail");
-      setScore(prevScore => prevScore - parseInt(result));
+    } else if(result && isSelected){
+      setScore(prevScore => prevScore - parseInt(isSelected));
       document.getElementById("notSelectedNumber").innerHTML = "";
     }
   }, [result, isSelected]);
@@ -77,7 +76,7 @@ function playingPage() {
       {showRules && (
       <div className="rule" id='rule'>
         <h3>How to play dice game</h3>
-        <p>Select any number <br />Click on dice image <br />after click on  dice  if selected number is equal to dice number you will get same point as dice <br />if you get wrong guess then same (guesses number) point will be dedcuted </p>
+        <p>Select any number <br />Click on dice image <br />after click on  dice  if selected number is equal to dice number you will get same point as dice <br />if you give wrong guess then same (chosen number) point will be dedcuted </p>
       </div>)}
     </div>
   )
