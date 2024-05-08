@@ -2,7 +2,7 @@ import React from 'react'
 import Button from '../components/Button'
 import './playingPage.css'
 import handleRollClick from '../utils/resultRoll'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import selectedNumber from '../utils/selection'
 import showRule from '../utils/showRules'
 import resetScore from '../utils/reset'
@@ -24,11 +24,12 @@ function playingPage() {
   console.log("isSelected:  " + isSelected);
 
   useEffect(() => {
-    if (isSelected == 0 && !(result == 0)) {
+    if (isSelected == 0 && !(result == 0 || result =="")) {
       // console.log("choose any isSelected");
       document.getElementById("notSelectedNumber").innerHTML = "You have not selected any number";
+      setResult();
     }
-    else if (result == isSelected) {
+    else if ((result == isSelected) ) {
       setScore(prevScore => prevScore + parseInt(result));
       document.getElementById("notSelectedNumber").innerHTML = "";
       // console.log("success");
